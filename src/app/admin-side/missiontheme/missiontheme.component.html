@@ -12,6 +12,9 @@
            </div>
            <div class="col-sm-8" style="display: flex;justify-content: flex-end;">
                <button class="btnAdd" routerLink="../addMissionTheme"><span class="btnAddIcon"><i class="fa fa-plus"></i></span><span class="add">Add</span></button>
+               <button class="btnEdit"><span class="btnEditIcon"><i class="fa fa-edit"></i></span><span class="edit">Edit</span></button>
+              <button class="btnDelete"><span class="btnDeleteIcon"><i class="fa fa-minus"></i></span><span class="delete">Delete</span></button>
+
            </div>
        </div>
        <div class="row">
@@ -65,7 +68,6 @@
       <div class="modal-footer">
         <button type="button" class="btnCancel" data-dismiss="modal" (click)="CloseRemoveMissionThemeModal()"><span class="Cancel"> Cancel</span> </button>
         <button type="button" class="btnRemove"><span class="remove" (click)=" DeleteMissionTheme()">Delete</span></button>
-        <button type="button" class="btnEdit">Edit</button>
       </div>
     </div>
   </div>

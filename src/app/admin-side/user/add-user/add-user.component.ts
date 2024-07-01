@@ -24,7 +24,12 @@ export class AddUserComponent implements OnInit {
     this.registerForm = this.fb.group({
       firstName:[null,Validators.compose([Validators.required])],
       lastName:[null,Validators.compose([Validators.required])],
-      phoneNumber:[null,Validators.compose([Validators.required,Validators.minLength(10),Validators.maxLength(10)])],
+      phoneNumber: [null, Validators.compose([
+        Validators.required,
+        Validators.minLength(10),
+        Validators.maxLength(10),
+        Validators.pattern(/^\d{10}$/) // Adjust pattern as per your requirement
+      ])],
       emailAddress:[null,Validators.compose([Validators.required,Validators.email])],
       password:[null,Validators.compose([Validators.required,Validators.minLength(5),Validators.maxLength(10)])],
       confirmPassword:[null,Validators.compose([Validators.required])]

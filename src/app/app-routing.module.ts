@@ -21,7 +21,7 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'addNewMission',component:NewMissionComponent},
   {path:'volunteeringMission/:missionId',component:VolunVolunteeringMissionComponent,canActivate:[AuthGuard]},
-  {path:'userProfile/:userId',component:UsereditprofileComponent,canActivate:[AuthGuard]},
+  {path:'userProfile/:userId',component:UsereditprofileComponent},
   {path:'privacyPolicy',component:PrivacyPolicyComponent},
   {path:'volunteeringTimesheet',component:VolunteeringTimesheetComponent,canActivate:[AuthGuard]},
   {path:'admin',loadChildren:()=>import('./admin-side/admin-side.module').then(mod => mod.AdminSideModule)}
